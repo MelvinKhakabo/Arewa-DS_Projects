@@ -1,6 +1,6 @@
 # Random Walk Data Generation Project
 ## Creating the RandomWalk() Class
-
+import random
 from random import choice
 class RandomWalk():
  """A class to generate random walks."""
