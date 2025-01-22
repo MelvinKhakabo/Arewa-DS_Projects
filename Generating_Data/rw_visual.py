@@ -12,7 +12,6 @@ plt.show()
 
 
 #Generating Multiple random walks
-
 # Keep making new walks, as long as the program is active.
 while True:
     # Make a random walk, and plot the points.
@@ -32,25 +31,30 @@ while True:
         break
 
 
+
 # Styling: Coloring the points
+# Generate point numbers for coloring
+point_numbers = list(range(rw.num_points))
 
-# Keep making new walks, as long as the program is active.
-while True:
-    # Make a random walk, and plot the points.
-    rw = RandomWalk()
-    rw.fill_walk()
-    
-    # Generate point numbers for coloring
-    point_numbers = list(range(rw.num_points))
-    
-    # Plot the random walk points with color mapping
-    plt.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues,
-                edgecolor='none', s=15)
-    
-    # Display the plot
-    plt.show()
+# Plot the random walk points with color mapping
+plt.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues,
+            edgecolor='none', s=15)
 
-    # Ask if the user wants to make another walk
-    keep_running = input("Make another walk? (y/n): ")
-    if keep_running == 'n':
-        break
+# Show the plot
+plt.show()
+
+
+#Plotting the start and end points
+# Generate point numbers for coloring
+point_numbers = list(range(rw.num_points))
+
+# Plot the random walk points with color mapping
+plt.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues,
+            edgecolor='none', s=15)
+
+# Emphasize the first and last points.
+plt.scatter(0, 0, c='green', edgecolors='none', s=100)  # Start point in green
+plt.scatter(rw.x_values[-1], rw.y_values[-1], c='red', edgecolors='none', s=100)  # End point in red
+
+# Show the plot
+plt.show()
