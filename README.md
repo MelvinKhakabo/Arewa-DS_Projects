@@ -16,3 +16,7 @@ and Death Valley, California
 
 
 ## API_Integration
+In this project, We’ll base our visualization on information from GitHub, a site that allows programmers to collaborate on projects. We’ll use GitHub’s API to 
+request information about Python projects on the site and then generate 
+an interactive visualization of the relative popularity of these projects in 
+Pygal. 
